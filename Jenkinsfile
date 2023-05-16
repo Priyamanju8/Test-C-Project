@@ -8,11 +8,11 @@ pipeline{
                  git 'https://github.com/Priyamanju8/Test-C-Project.git'
               }
           }
-          stage('Compile'){
+          stage("Compile"){
              
               steps{
-                  echo 'compiling..'
-                  sh 'mvn compile'
+                  sh 'echo "compiling.."'
+                  sh "mvn compile"
 	      }
           }
           stage('CodeReview'){
