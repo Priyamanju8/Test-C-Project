@@ -5,14 +5,14 @@ pipeline{
 	    
                steps{
 		 echo 'cloning..'
-                 git 'https://github.com/Priyamanju8/Test-C-Project.git'
+                 git 'https://github.com/akshu20791/DevOpsClassCodes.git'
               }
           }
-          stage("Compile"){
+          stage('Compile'){
              
               steps{
                   echo 'compiling..'
-                  sh "mvn compile"
+                  sh 'mvn compile'
 	      }
           }
           stage('CodeReview'){
@@ -40,7 +40,7 @@ pipeline{
 		  
               steps{
 		  
-                bat 'mvn package'
+                  sh 'mvn package'
               }
           }
 	     
